@@ -39,15 +39,15 @@ const Card = ({ item }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       className="
-        bg-white rounded-xl shadow-md
-        w-28 sm:w-32 md:w-28 lg:w-28
-        h-28 sm:h-32 md:h-28 lg:h-28
-        flex flex-col items-center justify-center
-        p-3
+        bg-white rounded-xl shadow-md 
+        w-28 sm:w-32 md:w-32 lg:w-32 
+        h-28 sm:h-32 md:h-32 lg:h-32
+        flex flex-col items-center justify-center 
+        p-3 sm:p-4
       "
     >
-      <IconComponent size={42} className={item.color} />
-      <span className="mt-2 font-semibold text-gray-700 text-center text-xs sm:text-sm">
+      <IconComponent size={40} className={item.color} />
+      <span className="mt-2 font-semibold text-gray-700 text-center text-sm">
         {item.name}
       </span>
     </motion.div>
@@ -56,51 +56,49 @@ const Card = ({ item }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-gray-50 py-16 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-indigo-600 mb-10">
+    <section
+      id="skills"
+      className="bg-gray-50 py-16 px-4 sm:px-6 overflow-x-hidden"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-indigo-600 mb-10">
           Skills & Tools
         </h2>
 
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-6">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-6">
           Technical Skills
         </h3>
 
-        <div
+        <motion.div
           className="
             grid 
-            grid-cols-2 
-            sm:grid-cols-3 
-            md:grid-cols-5 
-            lg:grid-cols-6
-            gap-4 sm:gap-5 md:gap-6
+            grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+            gap-4 sm:gap-6
             place-items-center
+            mb-12
           "
         >
           {technicalSkills.map((skill, idx) => (
             <Card key={idx} item={skill} />
           ))}
-        </div>
+        </motion.div>
 
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-12 mb-6">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-6">
           Tools & Platforms
         </h3>
 
-        <div
+        <motion.div
           className="
             grid 
-            grid-cols-2 
-            sm:grid-cols-3 
-            md:grid-cols-5 
-            lg:grid-cols-5
-            gap-4 sm:gap-5 md:gap-6
+            grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+            gap-4 sm:gap-6
             place-items-center
           "
         >
           {tools.map((tool, idx) => (
             <Card key={idx} item={tool} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
