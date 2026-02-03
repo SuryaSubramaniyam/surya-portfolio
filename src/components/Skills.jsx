@@ -34,16 +34,14 @@ const tools = [
 const Card = ({ item }) => {
   const IconComponent =
     FaIcons[item.icon] || SiIcons[item.icon] || FaIcons.FaQuestion;
+
   return (
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      className="bg-white rounded-xl shadow-lg w-32 h-32 flex flex-col items-center justify-center p-4 flex-shrink-0"
-    >
+    <div className="bg-white rounded-xl shadow-lg w-32 h-32 flex flex-col items-center justify-center p-4 flex-shrink-0">
       <IconComponent size={48} className={item.color} />
       <span className="mt-2 font-semibold text-gray-700 text-center">
         {item.name}
       </span>
-    </motion.div>
+    </div>
   );
 };
 
@@ -58,28 +56,40 @@ const Skills = () => {
         <h3 className="text-2xl font-semibold text-gray-700 mb-6">
           Technical Skills
         </h3>
-        <motion.div
-          className="flex gap-6 overflow-x-auto py-4 px-2 scrollbar-hide"
-          drag="x"
-          dragConstraints={{ left: -1000, right: 0 }}
+
+        {/* FIXED SCROLL CONTAINER */}
+        <div
+          className="
+            flex gap-6 overflow-x-auto py-4 px-2
+            touch-pan-x snap-x snap-mandatory
+            scrollbar-hide
+          "
         >
           {technicalSkills.map((skill, idx) => (
-            <Card key={idx} item={skill} />
+            <div key={idx} className="snap-start">
+              <Card item={skill} />
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         <h3 className="text-2xl font-semibold text-gray-700 mb-6 mt-12">
           Tools & Platforms
         </h3>
-        <motion.div
-          className="flex gap-6 overflow-x-auto py-4 px-2 scrollbar-hide"
-          drag="x"
-          dragConstraints={{ left: -1000, right: 0 }}
+
+        {/* FIXED SCROLL CONTAINER */}
+        <div
+          className="
+            flex gap-6 overflow-x-auto py-4 px-2
+            touch-pan-x snap-x snap-mandatory
+            scrollbar-hide
+          "
         >
           {tools.map((tool, idx) => (
-            <Card key={idx} item={tool} />
+            <div key={idx} className="snap-start">
+              <Card item={tool} />
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
