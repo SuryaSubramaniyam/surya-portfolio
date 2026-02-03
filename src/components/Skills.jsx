@@ -46,7 +46,7 @@ const Card = ({ item }) => {
         p-3
       "
     >
-      <IconComponent size={40} className={item.color} />
+      <IconComponent size={42} className={item.color} />
       <span className="mt-2 font-semibold text-gray-700 text-center text-xs sm:text-sm">
         {item.name}
       </span>
