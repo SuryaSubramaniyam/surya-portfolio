@@ -39,14 +39,15 @@ const Card = ({ item }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       className="
-        bg-white rounded-xl shadow-md 
-        w-28 sm:w-32 h-28 sm:h-32 
-        flex flex-col items-center justify-center 
-        p-4 flex-shrink-0
+        bg-white rounded-xl shadow-md
+        w-28 sm:w-32 md:w-28 lg:w-28
+        h-28 sm:h-32 md:h-28 lg:h-28
+        flex flex-col items-center justify-center
+        p-3
       "
     >
-      <IconComponent size={42} className={item.color} />
-      <span className="mt-2 font-semibold text-gray-700 text-center text-sm">
+      <IconComponent size={40} className={item.color} />
+      <span className="mt-2 font-semibold text-gray-700 text-center text-xs sm:text-sm">
         {item.name}
       </span>
     </motion.div>
@@ -61,49 +62,44 @@ const Skills = () => {
           Skills & Tools
         </h2>
 
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-5">
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-6">
           Technical Skills
         </h3>
 
-        {/* SCROLL CONTAINER FIXED */}
-        <div className="w-full flex justify-center">
-          <motion.div
-            className="
-              flex gap-4 sm:gap-6 
-              overflow-x-auto 
-              py-4 px-2 
-              max-w-full 
-              scrollbar-hide
-            "
-            drag="x"
-            dragConstraints={{ left: -1200, right: 0 }}
-          >
-            {technicalSkills.map((skill, idx) => (
-              <Card key={idx} item={skill} />
-            ))}
-          </motion.div>
+        <div
+          className="
+            grid 
+            grid-cols-2 
+            sm:grid-cols-3 
+            md:grid-cols-5 
+            lg:grid-cols-6
+            gap-4 sm:gap-5 md:gap-6
+            place-items-center
+          "
+        >
+          {technicalSkills.map((skill, idx) => (
+            <Card key={idx} item={skill} />
+          ))}
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-12 mb-5">
+        <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-12 mb-6">
           Tools & Platforms
         </h3>
 
-        <div className="w-full flex justify-center">
-          <motion.div
-            className="
-              flex gap-4 sm:gap-6 
-              overflow-x-auto 
-              py-4 px-2 
-              max-w-full 
-              scrollbar-hide
-            "
-            drag="x"
-            dragConstraints={{ left: -1200, right: 0 }}
-          >
-            {tools.map((tool, idx) => (
-              <Card key={idx} item={tool} />
-            ))}
-          </motion.div>
+        <div
+          className="
+            grid 
+            grid-cols-2 
+            sm:grid-cols-3 
+            md:grid-cols-5 
+            lg:grid-cols-5
+            gap-4 sm:gap-5 md:gap-6
+            place-items-center
+          "
+        >
+          {tools.map((tool, idx) => (
+            <Card key={idx} item={tool} />
+          ))}
         </div>
       </div>
     </section>
