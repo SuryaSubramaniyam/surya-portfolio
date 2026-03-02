@@ -13,8 +13,7 @@ const projectsData = [
     image: desi,
     description:
       "A full-stack handmade products marketplace with artisan onboarding and secure checkout.",
-    liveLink:
-      "https://desi-etsy-frontend-v2-l7l79okjl-surya-ss-projects-2e8e98a2.vercel.app",
+    liveLink: "https://desi-etsy-frontend-v2.vercel.app",
     codeLink: "#",
   },
   {
@@ -22,8 +21,7 @@ const projectsData = [
     image: hyperlocal,
     description:
       "On-demand service booking platform with real-time payments and dashboards.",
-    liveLink:
-      "https://hyperlocal-frontend-v1-4vrauie98-surya-ss-projects-2e8e98a2.vercel.app",
+    liveLink: "https://hyperlocal-frontend-v2.vercel.app",
     codeLink: "#",
   },
   {
@@ -31,8 +29,7 @@ const projectsData = [
     image: restrobit,
     description:
       "Restaurant management dashboard for orders, menu, analytics, and real-time updates.",
-    liveLink:
-      "https://restrobit-dashboard-v1-mopwzq2zn-surya-ss-projects-2e8e98a2.vercel.app",
+    liveLink: "https://restrobit-dashboard-v1.vercel.app",
     codeLink: "#",
   },
   {
@@ -40,8 +37,7 @@ const projectsData = [
     image: greengrocery,
     description:
       "Online grocery shopping app with product listings, cart system, and modern responsive UI.",
-    liveLink:
-      "https://greengrocery-v1-bz0oucve0-surya-ss-projects-2e8e98a2.vercel.app",
+    liveLink: "https://greengrocery-v1.vercel.app",
     codeLink: "#",
   },
 
