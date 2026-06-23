@@ -1,153 +1,165 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import desi from "../assets/desi-etsy.png";
-import hyperlocal from "../assets/hyperlocal.png";
-import restrobit from "../assets/restrobit.png";
+import portfolio from "../assets/portfolio-design.png";
 import greengrocery from "../assets/greengrocery.png";
-import employee from "../assets/employee-crud.png";
+import restrobit from "../assets/restrobit.png";
+import mothersday from "../assets/Mothersday-poster.png";
 
 const projectsData = [
   {
-    title: "Desi Etsy",
-    image: desi,
+    title: "Mother's Day Social Media Poster",
+    image: mothersday,
+    category: "Social Media Design",
     description:
-      "A full-stack handmade products marketplace with artisan onboarding and secure checkout.",
-    liveLink: "https://desi-etsy-frontend-v2.vercel.app",
-    codeLink: "#",
-  },
-  {
-    title: "Hyperlocal Services",
-    image: hyperlocal,
-    description:
-      "On-demand service booking platform with real-time payments and dashboards.",
-    liveLink: "https://hyperlocal-frontend-v2.vercel.app",
-    codeLink: "#",
-  },
-  {
-    title: "Restrobit Dashboard",
-    image: restrobit,
-    description:
-      "Restaurant management dashboard for orders, menu, analytics, and real-time updates.",
-    liveLink: "https://restrobit-dashboard-v1.vercel.app",
-    codeLink: "#",
-  },
-  {
-    title: "Green Grocery",
-    image: greengrocery,
-    description:
-      "Online grocery shopping app with product listings, cart system, and modern responsive UI.",
-    liveLink: "https://greengrocery-v1.vercel.app",
-    codeLink: "#",
+      "Designed a heartfelt Mother's Day promotional poster featuring elegant typography, floral elements, and emotional visual storytelling to celebrate and honor mothers.",
+    tools: "Canva • Photoshop",
   },
 
   {
-    title: "Employee CRUD",
-    image: employee,
+    title: "Personal Graphic Design Portfolio",
+    image: portfolio,
+    category: "Branding & Portfolio Design",
     description:
-      "Employee management system with Create, Read, Update, and Delete operations using React.",
-    liveLink:
-      "https://employee-frontend-qexe0e7ig-surya-ss-projects-2e8e98a2.vercel.app",
-    codeLink: "#",
+      "Designed and developed a modern personal portfolio focused on visual storytelling, clean layouts, professional presentation, and strong personal branding.",
+    tools: "Canva • Figma",
+  },
+
+  {
+    title: "Green Grocery UI Design",
+    image: greengrocery,
+    category: "UI/UX Design",
+    description:
+      "Created responsive user interfaces, modern layouts, and engaging visual components while focusing on usability and user experience.",
+    tools: "Figma • Canva",
+  },
+
+  {
+    title: "Restrobit Dashboard Design",
+    image: restrobit,
+    category: "Dashboard Design",
+    description:
+      "Designed intuitive dashboard screens, data visualization layouts, structured navigation systems, and clean user experiences.",
+    tools: "Figma",
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-white px-4 sm:px-6 py-20">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="projects"
+      className="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 overflow-x-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 overflow-hidden">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-indigo-600 mb-3">
-            Projects
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm mb-4">
+            Portfolio Showcase
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Featured Design Works
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
-            Some of my best frontend & full-stack work
+
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            A collection of graphic design, branding, and UI/UX projects
+            showcasing creativity, visual storytelling, and modern design
+            principles.
           </p>
         </div>
 
-        {/* Horizontal Scroll */}
-        <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory">
+        {/* Projects Grid */}
+        <div
+          className="
+    flex
+    gap-6
+    overflow-x-auto
+    pb-4
+    snap-x
+    snap-mandatory
+    scrollbar-thin
+    scrollbar-thumb-indigo-400
+    scrollbar-track-transparent
+  "
+        >
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
               className="
-                group relative flex-shrink-0
-                w-[90%] sm:w-[70%] md:w-[360px]
-                bg-white rounded-xl overflow-hidden
-                border border-gray-200 hover:shadow-xl
-                transition-all duration-500 snap-center
-              "
+  flex-shrink-0
+  w-[320px]
+  md:w-[380px]
+  bg-white
+  rounded-3xl
+  overflow-hidden
+  shadow-lg
+  hover:shadow-2xl
+  transition-all
+  duration-500
+  group
+  snap-center
+"
             >
               {/* Image */}
-              <div className="relative overflow-hidden">
+              <div className="overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 sm:h-56 object-cover
-                             transform group-hover:scale-110
-                             transition-transform duration-700"
+                  className="
+    w-full
+    aspect-[4/5]
+    object-cover
+    object-center
+    group-hover:scale-105
+    transition-transform
+    duration-700
+  "
                 />
-
-                {/* Overlay */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-t
-                             from-indigo-900/80 via-indigo-700/40 to-transparent
-                             opacity-0 group-hover:opacity-100
-                             transition-opacity duration-500"
-                />
-
-                {/* Hover Content */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 text-white
-                             translate-y-8 opacity-0
-                             group-hover:translate-y-0 group-hover:opacity-100
-                             transition-all duration-500"
-                >
-                  <h3 className="text-base sm:text-lg font-semibold mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-indigo-100 mb-3 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="flex gap-3">
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3 py-2 bg-white text-indigo-700
-                                 rounded-lg text-xs sm:text-sm font-medium
-                                 hover:bg-indigo-100 transition"
-                    >
-                      Live
-                    </a>
-                    <a
-                      href={project.codeLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3 py-2 border border-white text-white
-                                 rounded-lg text-xs sm:text-sm font-medium
-                                 hover:bg-white hover:text-indigo-700 transition"
-                    >
-                      Code
-                    </a>
-                  </div>
-                </div>
               </div>
 
-              {/* Normal Content */}
-              <div className="p-4 sm:p-5">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">
+              {/* Content */}
+              <div className="p-6">
+                <span
+                  className="
+                    inline-block
+                    px-3
+                    py-1
+                    rounded-full
+                    bg-indigo-100
+                    text-indigo-700
+                    text-xs
+                    font-medium
+                    mb-4
+                  "
+                >
+                  {project.category}
+                </span>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-600 line-clamp-3">
+
+                <p className="text-gray-600 text-sm leading-relaxed mb-5">
                   {project.description}
                 </p>
+
+                <div className="border-t pt-4">
+                  <p className="text-sm text-gray-500">
+                    <span className="font-semibold text-gray-700">Tools:</span>{" "}
+                    {project.tools}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

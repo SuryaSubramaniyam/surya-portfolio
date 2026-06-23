@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
   FaLinkedin,
-  FaGithub,
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhone,
@@ -57,11 +56,13 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Contact Me
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Let's Work Together
           </h2>
           <p className="text-gray-600 mt-3 max-w-xl mx-auto">
-            Let’s build something amazing together. Reach out anytime.
+            Looking for creative designs, branding solutions, social media
+            creatives, or UI/UX designs? Let's connect and bring your ideas to
+            life.
           </p>
         </div>
 
@@ -86,7 +87,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-xl font-bold text-gray-800">Surya S</p>
-                <p className="text-gray-500">Frontend & UI Developer</p>
+                <p className="text-gray-500">Graphic Designer</p>
               </div>
             </div>
 
@@ -116,12 +117,34 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* About */}
             <p className="text-gray-600 leading-relaxed mb-8">
-              I’m always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision. Let’s connect!
+              I specialize in graphic design, social media creatives, branding,
+              poster design, and UI/UX design. Whether you need a compelling
+              visual identity or engaging digital content, I'm always excited to
+              collaborate on creative projects.
             </p>
+            <div className="mb-8">
+              <h3 className="font-semibold text-gray-800 mb-3">
+                Available For
+              </h3>
 
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Graphic Design",
+                  "Poster Design",
+                  "Social Media Design",
+                  "Branding",
+                  "Freelance Projects",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
             {/* Social Links */}
             <div className="flex gap-4">
               {[
@@ -130,11 +153,7 @@ const Contact = () => {
                   link: "https://www.linkedin.com/in/suryas19",
                   colors: "from-indigo-500 to-purple-500",
                 },
-                {
-                  icon: <FaGithub />,
-                  link: "https://github.com/SuryaSubramaniyam",
-                  colors: "from-purple-500 to-pink-500",
-                },
+
                 {
                   icon: <FaEnvelope />,
                   link: "mailto:suryasubramaniyam19@gmail.com",

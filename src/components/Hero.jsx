@@ -48,20 +48,36 @@ const Hero = () => {
                 repeatDelay: 1,
               }}
               className="text-xl sm:text-2xl md:text-3xl font-semibold
-                         bg-gradient-to-r from-indigo-600 to-purple-600
-                         bg-clip-text text-transparent"
+               bg-gradient-to-r from-indigo-600 to-purple-600
+               bg-clip-text text-transparent"
             >
-              Frontend & UI Developer
+              Graphic Designer & Visual Creator
             </motion.p>
           </div>
 
           {/* Description */}
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto md:mx-0">
-            I design and develop clean, responsive, and high-performance web
-            interfaces using modern frontend technologies. Passionate about UI,
-            UX, and turning ideas into elegant digital products.
+            I create visually compelling designs that help brands communicate,
+            connect, and grow. From social media creatives and marketing
+            materials to logo design and brand identity, I transform ideas into
+            impactful visual experiences that leave a lasting impression.
           </p>
+          <div className="flex flex-wrap gap-6 mb-10 justify-center md:justify-start">
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-600">10+</h3>
+              <p className="text-gray-500 text-sm">Design Projects</p>
+            </div>
 
+            <div>
+              <h3 className="text-2xl font-bold text-purple-600">1+</h3>
+              <p className="text-gray-500 text-sm">Brand Concepts</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-pink-600">1+</h3>
+              <p className="text-gray-500 text-sm">Months Experience</p>
+            </div>
+          </div>
           {/* Buttons: VIEW + DOWNLOAD */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
             {/* Contact Button */}
@@ -85,12 +101,12 @@ const Hero = () => {
                   transition-transform duration-700
                 "
               />
-              <span className="relative z-10">Contact Me</span>
+              <span className="relative z-10">Let's Work Together</span>
             </a>
 
             {/* VIEW Resume (Designer Resume - Canva / Drive) */}
             <a
-              href="https://drive.google.com/file/d/15nlgO-dkGYW7K4IBWbP2wvwiSAe9iUoE/view?usp=sharing"
+              href="https://drive.google.com/file/d/1x0qGESkRyvepoRAekVxh3yzm_aPrJqRy/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="
@@ -108,7 +124,7 @@ const Hero = () => {
             {/* DOWNLOAD Resume (ATS PDF) */}
             <a
               href="/resume-ats.pdf"
-              download="Surya_S_Frontend_Resume.pdf"
+              download="Surya_S_Graphic Designer_Resume.pdf"
               className="
                 inline-flex items-center justify-center
                 px-8 py-4 rounded-xl font-semibold
@@ -134,10 +150,10 @@ const Hero = () => {
             src={profileimage}
             alt="Surya S"
             className="
-              w-64 sm:w-72 md:w-80 h-80 md:h-96
-              object-cover rounded-3xl
-              shadow-2xl
-            "
+  w-64 sm:w-72 md:w-80 h-80 md:h-96
+  object-cover rounded-3xl
+  shadow-2xl ring-4 ring-white
+"
           />
         </motion.div>
       </div>

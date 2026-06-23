@@ -1,60 +1,79 @@
 // src/components/Services.jsx
 import { motion } from "framer-motion";
 import {
-  Code,
   Palette,
-  Database,
-  Globe,
-  Smartphone,
-  Rocket,
+  PenTool,
+  Image,
+  Brush,
+  Layers,
+  MonitorSmartphone,
 } from "lucide-react";
 
 const services = [
   {
-    title: "Frontend Development",
+    title: "Logo Design",
     description:
-      "Building responsive, fast, and modern web interfaces using React, JavaScript, and Tailwind CSS.",
-    icon: <Code className="w-8 h-8 text-indigo-600" />,
+      "Crafting memorable and professional logos that represent your brand identity and create a lasting impression.",
+    icon: <PenTool className="w-8 h-8 text-indigo-600" />,
   },
+
   {
-    title: "UI Design & Development",
+    title: "Brand Identity",
     description:
-      "Designing clean, intuitive, and visually appealing user interfaces with modern design principles and Figma.",
-    icon: <Palette className="w-8 h-8 text-pink-500" />,
+      "Developing complete visual identity systems including color palettes, typography, and brand guidelines.",
+    icon: <Layers className="w-8 h-8 text-purple-600" />,
   },
+
   {
-    title: "Graphic Design",
+    title: "Social Media Creatives",
     description:
-      "Creating engaging visual designs, banners, and layouts using Canva and design best practices.",
-    icon: <Database className="w-8 h-8 text-green-600" />,
+      "Designing engaging Instagram posts, Facebook ads, stories, and promotional content that attracts audiences.",
+    icon: <Image className="w-8 h-8 text-pink-500" />,
   },
+
   {
-    title: "Website Development",
+    title: "Poster & Flyer Design",
     description:
-      "Developing complete, professional websites with clean structure, smooth navigation, and responsive layouts.",
-    icon: <Smartphone className="w-8 h-8 text-purple-600" />,
+      "Creating impactful posters, flyers, brochures, and event marketing materials with strong visual appeal.",
+    icon: <Brush className="w-8 h-8 text-orange-500" />,
   },
+
   {
-    title: "Deployment & Hosting",
+    title: "Marketing Materials",
     description:
-      "Deploying frontend and backend applications on Vercel and Render with production-ready builds.",
-    icon: <Rocket className="w-8 h-8 text-orange-500" />,
+      "Designing banners, advertisements, business cards, and promotional assets tailored to business goals.",
+    icon: <Palette className="w-8 h-8 text-green-600" />,
   },
+
   {
-    title: "Full Stack Project Support",
+    title: "UI/UX Design",
     description:
-      "Building complete project workflows with frontend, backend integration, and API consumption when required.",
-    icon: <Globe className="w-8 h-8 text-blue-600" />,
+      "Designing modern user interfaces, wireframes, and digital experiences focused on usability and aesthetics.",
+    icon: <MonitorSmartphone className="w-8 h-8 text-blue-600" />,
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section
+      id="services"
+      className="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50"
+    >
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900">
-          My Services
-        </h2>
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm mb-4">
+            Creative Services
+          </span>
+
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+            What I Can Create
+          </h2>
+
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Helping brands communicate effectively through creative design,
+            visual storytelling, and impactful digital experiences.
+          </p>
+        </div>
         <p className="text-center text-gray-600 mt-3 mb-14">
           What I can do for you
         </p>
@@ -65,9 +84,20 @@ export default function Services() {
               key={index}
               whileHover={{ scale: 1.04, y: -6 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="p-7 bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all"
+              className="
+p-8
+bg-white/80
+backdrop-blur-sm
+rounded-3xl
+border border-white
+shadow-lg
+hover:shadow-2xl
+transition-all
+duration-500
+group
+"
             >
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">

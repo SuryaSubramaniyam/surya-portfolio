@@ -6,16 +6,31 @@ import { motion } from "framer-motion";
    ------------------------- */
 const experienceData = [
   {
-    icon: "💻",
-    title: "Frontend & UI Developer",
-    company: "Project Based Self Learning",
-    duration: "Present",
+    icon: "🎨",
+    title: "Graphic Designer",
+    company: "Freelance & Personal Projects",
+    duration: "2025 - Present",
     responsibilities: [
-      "Built responsive web interfaces using React, JavaScript, and Tailwind CSS",
-      "Designed clean and user-friendly UI with modern design principles",
-      "Developed real-world projects  and e-commerce platforms",
-      "Implemented reusable components, routing, and deployed apps on Vercel with Git",
+      "Designed social media creatives, promotional banners, and marketing materials",
+      "Created logo concepts, brand identity elements, and visual assets",
+      "Designed engaging posters, event graphics, and digital advertisements",
+      "Worked with Canva, Adobe Photoshop, Illustrator, and Figma to create professional designs",
     ],
+    skills: ["Photoshop", "Canva", "Branding"],
+  },
+
+  {
+    icon: "✨",
+    title: "Creative Design Trainee",
+    company: "Self Learning & Practice Projects",
+    duration: "2024 - 2025",
+    responsibilities: [
+      "Learned visual design principles, typography, color theory, and layout composition",
+      "Created portfolio projects including logos, posters, flyers, and social media campaigns",
+      "Improved branding and storytelling skills through practical design exercises",
+      "Developed creative problem-solving abilities and attention to visual detail",
+    ],
+    skills: ["Illustrator", "Typography", "Social Media Design"],
   },
   {
     icon: "🛠",
@@ -64,7 +79,10 @@ const ThemedCard = ({ children, icon, title, subtitle, meta, badge }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
-      whileHover={{ scale: 1.03 }}
+      whileHover={{
+        scale: 1.03,
+        y: -8,
+      }}
       className="
         group bg-white rounded-xl
         p-4 md:p-6
@@ -148,6 +166,17 @@ const ExperienceCard = ({ item }) => {
           <li key={i}>{r}</li>
         ))}
       </ul>
+
+      <div className="flex flex-wrap gap-2 mt-4">
+        {item.skills?.map((skill, index) => (
+          <span
+            key={index}
+            className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-medium"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
     </ThemedCard>
   );
 };
@@ -165,9 +194,10 @@ const EducationCard = ({ item }) => {
       badge={`CGPA: ${item.cgpa}`}
     >
       <p className="text-xs md:text-sm text-gray-700 mt-1 line-clamp-3 md:line-clamp-none">
-        Focused on software development, web technologies, data structures, and
-        database systems. Developed a strong foundation in programming,
-        application development, and modern web frameworks.
+        Developed strong creative thinking, problem-solving abilities,
+        communication, and digital skills. My academic journey strengthened my
+        ability to combine creativity with technology, helping me build visually
+        engaging and impactful design solutions.
       </p>
     </ThemedCard>
   );
@@ -186,10 +216,10 @@ const ExperienceEducation = () => {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-700 mb-2">
-            Experience & Education
+            Creative Journey & Education
           </h2>
           <p className="text-gray-600 text-sm md:text-base">
-            My professional journey and academic background
+            My creative experience, design journey, and educational foundation
           </p>
         </div>
 
@@ -198,7 +228,7 @@ const ExperienceEducation = () => {
           {/* Experience */}
           <div>
             <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-6 border-l-4 border-indigo-600 pl-3">
-              Experience
+              Design Experience
             </h3>
 
             <div className="space-y-6 md:space-y-8">
@@ -211,7 +241,7 @@ const ExperienceEducation = () => {
           {/* Education */}
           <div>
             <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-6 border-l-4 border-purple-600 pl-3">
-              Education
+              Academic Background
             </h3>
 
             <div className="space-y-6 md:space-y-8">

@@ -1,12 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FiMail,
-  FiPhone,
-  FiMapPin,
-  FiLinkedin,
-  FiGithub,
-} from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGlobe } from "react-icons/fi";
 import profileimage from "../assets/profile-img.png";
 
 const About = () => {
@@ -16,33 +10,45 @@ const About = () => {
       label: "Email",
       value: "suryasubramaniyam19@gmail.com",
     },
-    { icon: <FiPhone />, label: "Phone", value: "+91 9080995182" },
+
+    {
+      icon: <FiPhone />,
+      label: "Phone",
+      value: "+91 9080995182",
+    },
+
     {
       icon: <FiMapPin />,
       label: "Location",
-      value: "Bengaluru,K.R.Puram, India",
+      value: "Bengaluru, Karnataka, India",
     },
+
     {
       icon: <FiLinkedin />,
       label: "LinkedIn",
       value: (
         <a
           href="https://www.linkedin.com/in/suryas19"
+          target="_blank"
+          rel="noreferrer"
           className="text-indigo-600 hover:underline"
         >
           View Profile
         </a>
       ),
     },
+
     {
-      icon: <FiGithub />,
-      label: "GitHub",
+      icon: <FiGlobe />,
+      label: "Portfolio",
       value: (
         <a
-          href="https://github.com/SuryaSubramaniyam"
+          href="https://www.suryadev.site"
+          target="_blank"
+          rel="noreferrer"
           className="text-indigo-600 hover:underline"
         >
-          View Repository
+          Visit Portfolio
         </a>
       ),
     },
@@ -51,7 +57,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 bg-gray-50  "
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50  "
     >
       {/* Centered Container */}
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
@@ -66,7 +72,7 @@ const About = () => {
           <img
             src={profileimage}
             alt="Profile"
-            className="rounded-xl shadow-2xl object-cover w-full h-full border-2 border-indigo-600"
+            className="rounded-3xl shadow-2xl object-cover w-full h-full border-4 border-white ring-4 ring-indigo-100"
           />
         </motion.div>
 
@@ -84,29 +90,67 @@ const About = () => {
 
           {/* Desktop About Text */}
           <p className="hidden md:block text-gray-700 mb-8 text-justify leading-relaxed max-w-1xl">
-            I am a Frontend & UI Developer with a strong foundation in building
-            clean, responsive, and user-centric web applications. I specialize
-            in creating modern interfaces using React, JavaScript, Tailwind CSS,
-            and UI design tools like Figma and Canva. I hold a Master’s degree
-            in Computer Applications (MCA) from Thiruvalluvar University, where
-            I developed a solid understanding of software development principles
-            and web technologies. Through self-driven learning, real-world
-            projects, and continuous practice, I have strengthened my skills in
-            frontend development and user interface design. I enjoy transforming
-            ideas into elegant digital experiences and building interfaces that
-            are visually appealing, intuitive, and performance-driven. I am
-            actively seeking opportunities as a Frontend Developer or UI
-            Developer where I can contribute, learn, and grow professionally.
+            I am a passionate Graphic Designer dedicated to creating visually
+            engaging designs that communicate ideas effectively and leave a
+            lasting impression. My expertise includes social media creatives,
+            logo design, brand identity, marketing materials, posters, banners,
+            and digital content creation. I hold a Master’s degree in Computer
+            Applications (MCA) from Thiruvalluvar University, which has
+            strengthened my creativity, problem-solving abilities, and
+            understanding of modern digital tools. Using tools such as Adobe
+            Photoshop, Adobe Illustrator, Canva, and Figma, I transform concepts
+            into impactful visual experiences. I enjoy blending creativity with
+            strategy to help businesses build strong brand identities and
+            connect with their audiences through compelling design. I am
+            actively seeking opportunities as a Graphic Designer where I can
+            contribute innovative ideas, expand my skills, and create meaningful
+            visual solutions.
           </p>
 
           {/* Mobile About Text */}
           <p className="block md:hidden text-gray-700 mb-10 text-center leading-relaxed max-w-md mx-auto">
-            I am a passionate Frontend & UI Developer specializing in building
-            clean, responsive, and modern web interfaces using React,
-            JavaScript, and Tailwind CSS. I enjoy creating intuitive user
-            experiences and transforming ideas into elegant digital products.
+            I am a creative Graphic Designer specializing in logo design, social
+            media creatives, branding, posters, and marketing materials. I enjoy
+            transforming ideas into visually engaging designs that help brands
+            communicate and grow.
           </p>
+          <div className="flex flex-wrap gap-3 mb-8">
+            <span className="px-4 py-2 bg-white rounded-full shadow text-sm font-medium">
+              Photoshop
+            </span>
 
+            <span className="px-4 py-2 bg-white rounded-full shadow text-sm font-medium">
+              Illustrator
+            </span>
+
+            <span className="px-4 py-2 bg-white rounded-full shadow text-sm font-medium">
+              Canva
+            </span>
+
+            <span className="px-4 py-2 bg-white rounded-full shadow text-sm font-medium">
+              Branding
+            </span>
+
+            <span className="px-4 py-2 bg-white rounded-full shadow text-sm font-medium">
+              Social Media Design
+            </span>
+          </div>
+          <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="bg-white rounded-xl p-4 shadow-md text-center">
+              <h3 className="text-2xl font-bold text-indigo-600">10+</h3>
+              <p className="text-sm text-gray-500">Designs</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-4 shadow-md text-center">
+              <h3 className="text-2xl font-bold text-purple-600">1+</h3>
+              <p className="text-sm text-gray-500">Brand Concepts</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-4 shadow-md text-center">
+              <h3 className="text-2xl font-bold text-pink-600">100%</h3>
+              <p className="text-sm text-gray-500">Creative Focus</p>
+            </div>
+          </div>
           {/* Personal Info List */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {personalInfo.map((info) => (
