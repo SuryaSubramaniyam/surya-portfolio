@@ -123,7 +123,7 @@ const Hero = () => {
 
             {/* DOWNLOAD Resume (ATS PDF) */}
             <a
-              href="/resume-ats.pdf"
+              href="/Surya_S_Graphic Designer_Resume.pdf"
               download="Surya_S_Graphic Designer_Resume.pdf"
               className="
                 inline-flex items-center justify-center
