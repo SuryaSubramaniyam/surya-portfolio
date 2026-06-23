@@ -123,16 +123,16 @@ const Hero = () => {
 
             {/* DOWNLOAD Resume (ATS PDF) */}
             <a
-              href="/Surya_S_Graphic Designer_Resume.pdf"
-              download="Surya_S_Graphic Designer_Resume.pdf"
+              href="/Surya_S_Graphic_Designer_Resume.pdf"
+              download
               className="
-                inline-flex items-center justify-center
-                px-8 py-4 rounded-xl font-semibold
-                bg-gray-900 text-white
-                hover:bg-gray-800
-                shadow-md hover:shadow-lg
-                transition-all duration-300
-              "
+    inline-flex items-center justify-center
+    px-8 py-4 rounded-xl font-semibold
+    bg-gray-900 text-white
+    hover:bg-gray-800
+    shadow-md hover:shadow-lg
+    transition-all duration-300
+  "
             >
               Download Resume
             </a>
